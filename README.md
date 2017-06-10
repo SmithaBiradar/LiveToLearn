@@ -1,1 +1,1 @@
-# LiveToLearn
+# LearningPlatform
