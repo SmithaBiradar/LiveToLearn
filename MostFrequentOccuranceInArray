@@ -1,0 +1,23 @@
+ 
+ Public static GetMostCommonOccuranceInArray
+ {
+        public static List<int> CommonOccurrence(int[] numbers)
+        {
+            List<int> result = new List<int>();
+            var counts = new Dictionary<int, int>();
+            foreach (int number in numbers)
+            {
+                int count;
+                counts.TryGetValue(number, out count);
+                count++;
+                counts[number] = count;
+            }
+            foreach (var pair in counts)
+            {
+              if (pair.Value == counts.Values.Max())
+                        result.Add(pair.Key);
+             }
+         
+            return result;
+        }
+  }
